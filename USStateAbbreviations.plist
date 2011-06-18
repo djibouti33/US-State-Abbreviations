@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ALABAMA</key>
+	<string>AL</string>
+	<key>ALASKA</key>
+	<string>AK</string>
+	<key>AMERICAN SAMOA</key>
+	<string>AS</string>
+	<key>ARIZONA</key>
+	<string>AZ</string>
+	<key>ARKANSAS</key>
+	<string>AR</string>
+	<key>CALIFORNIA</key>
+	<string>CA</string>
+	<key>COLORADO</key>
+	<string>CO</string>
+	<key>CONNECTICUT</key>
+	<string>CT</string>
+	<key>DELAWARE</key>
+	<string>DE</string>
+	<key>DISTRICT OF COLUMBIA</key>
+	<string>DC</string>
+	<key>FEDERATED STATES OF MICRONESIA</key>
+	<string>FM</string>
+	<key>FLORIDA</key>
+	<string>FL</string>
+	<key>GEORGIA</key>
+	<string>GA</string>
+	<key>GUAM</key>
+	<string>GU</string>
+	<key>HAWAII</key>
+	<string>HI</string>
+	<key>IDAHO</key>
+	<string>ID</string>
+	<key>ILLINOIS</key>
+	<string>IL</string>
+	<key>INDIANA</key>
+	<string>IN</string>
+	<key>IOWA</key>
+	<string>IA</string>
+	<key>KANSAS</key>
+	<string>KS</string>
+	<key>KENTUCKY</key>
+	<string>KY</string>
+	<key>LOUISIANA</key>
+	<string>LA</string>
+	<key>MAINE</key>
+	<string>ME</string>
+	<key>MARSHALL ISLANDS</key>
+	<string>MH</string>
+	<key>MARYLAND</key>
+	<string>MD</string>
+	<key>MASSACHUSETTS</key>
+	<string>MA</string>
+	<key>MICHIGAN</key>
+	<string>MI</string>
+	<key>MINNESOTA</key>
+	<string>MN</string>
+	<key>MISSISSIPPI</key>
+	<string>MS</string>
+	<key>MISSOURI</key>
+	<string>MO</string>
+	<key>MONTANA</key>
+	<string>MT</string>
+	<key>NEBRASKA</key>
+	<string>NE</string>
+	<key>NEVADA</key>
+	<string>NV</string>
+	<key>NEW HAMPSHIRE</key>
+	<string>NH</string>
+	<key>NEW JERSEY</key>
+	<string>NJ</string>
+	<key>NEW MEXICO</key>
+	<string>NM</string>
+	<key>NEW YORK</key>
+	<string>NY</string>
+	<key>NORTH CAROLINA</key>
+	<string>NC</string>
+	<key>NORTH DAKOTA</key>
+	<string>ND</string>
+	<key>NORTHERN MARIANA ISLANDS</key>
+	<string>MP</string>
+	<key>OHIO</key>
+	<string>OH</string>
+	<key>OKLAHOMA</key>
+	<string>OK</string>
+	<key>OREGON</key>
+	<string>OR</string>
+	<key>PALAU</key>
+	<string>PW</string>
+	<key>PENNSYLVANIA</key>
+	<string>PA</string>
+	<key>PUERTO RICO</key>
+	<string>PR</string>
+	<key>RHODE ISLAND</key>
+	<string>RI</string>
+	<key>SOUTH CAROLINA</key>
+	<string>SC</string>
+	<key>SOUTH DAKOTA</key>
+	<string>SD</string>
+	<key>TENNESSEE</key>
+	<string>TN</string>
+	<key>TEXAS</key>
+	<string>TX</string>
+	<key>UTAH</key>
+	<string>UT</string>
+	<key>VERMONT</key>
+	<string>VT</string>
+	<key>VIRGIN ISLANDS</key>
+	<string>VI</string>
+	<key>VIRGINIA</key>
+	<string>VA</string>
+	<key>WASHINGTON</key>
+	<string>WA</string>
+	<key>WEST VIRGINIA</key>
+	<string>WV</string>
+	<key>WISCONSIN</key>
+	<string>WI</string>
+	<key>WYOMING</key>
+	<string>WY</string>
+</dict>
+</plist>
