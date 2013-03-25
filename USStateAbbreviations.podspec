@@ -17,7 +17,5 @@ Pod::Spec.new do |s|
 
   s.public_header_files = 'Classes/**/*.h'
 
-  s.resources = "README"
-  s.resources = "LICENSE"
-  s.resources = "USStateAbbreviations.plist"
+  s.resources = ["README", "USStateAbbreviations.plist"]
 end
