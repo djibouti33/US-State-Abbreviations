@@ -7,25 +7,24 @@
 
 @implementation NSString (USStateMap)
 
-NSDictionary * stateAbbreviationMap;
-
-+ (void) initialize
-{
-    // in my init
-    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"USStateAbbreviations" ofType:@"plist"];
-    stateAbbreviationMap = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+static NSDictionary *stateAbbreviationsMap = nil;
+- (NSDictionary *)stateAbbreviationsMap {
+    if (stateAbbreviationsMap == nil) {
+        NSString *plist = [[NSBundle mainBundle] pathForResource:@"USStateAbbreviations" ofType:@"plist"];
+        stateAbbreviationsMap = [[NSDictionary alloc] initWithContentsOfFile:plist];
+    }
+    return stateAbbreviationsMap;
 }
 
-- (NSString*) stateAbbreviationFromFullName
-{
-    return [stateAbbreviationMap objectForKey:[self uppercaseString]];
+- (NSString *)stateAbbreviationFromFullName {
+    return [self.stateAbbreviationsMap objectForKey:self.uppercaseString];
 }
 
 - (NSString*) stateFullNameFromAbbreviation
 {
     NSString * upperAbbr = [self uppercaseString];
     
-    for(NSString * abbreviation in [stateAbbreviationMap allValues])
+    for(NSString * abbreviation in [self.stateAbbreviationsMap allValues])
     {
         if([abbreviation isEqualToString:upperAbbr])
         {   
