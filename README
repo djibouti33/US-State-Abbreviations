@@ -2,3 +2,18 @@ Property List for Mac development containing full uppercase US State/Possession 
 
 Taken from:
 http://www.usps.com/ncsc/lookups/usps_abbreviations.html
+
+Usage:
+
+// At the top of your class file (.m)
+#import "NSString+USStateMap.h"
+
+// Later in your class file (.m)
+
+// Turn "California" -> "CA"
+NSLog(@"What is the abbreviation for California? Answer: %@", [@"California" stateAbbreviationFromFullName]);
+
+// Or
+
+// Turn "CA" -> "California"
+NSLog(@"What is the full name for the state abbreviation CA? Answer: %@", [@"CA" stateFullNameFromAbbreviation]);
