@@ -28,7 +28,7 @@ static NSDictionary *stateAbbreviationsMap = nil;
     {
         if([abbreviation isEqualToString:upperAbbr])
         {   
-	    return [[[self.stateAbbreviationsMap objectForKey:upperAbbr] lowercaseString] capitalizedString];
+	    return [[self.stateAbbreviationsMap objectForKey:upperAbbr] capitalizedString];
 	}
     }
     return nil;
