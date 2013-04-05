@@ -8,7 +8,8 @@
 @implementation NSString (USStateMap)
 
 static NSDictionary *stateAbbreviationsMap = nil;
-- (NSDictionary *)stateAbbreviationsMap {
+- (NSDictionary *)stateAbbreviationsMap 
+{
     if (stateAbbreviationsMap == nil) {
         NSString *plist = [[NSBundle mainBundle] pathForResource:@"USStateAbbreviations" ofType:@"plist"];
         stateAbbreviationsMap = [[NSDictionary alloc] initWithContentsOfFile:plist];
@@ -16,18 +17,17 @@ static NSDictionary *stateAbbreviationsMap = nil;
     return stateAbbreviationsMap;
 }
 
-- (NSString *)stateAbbreviationFromFullName {
+- (NSString *)stateAbbreviationFromFullName 
+{
     return [self.stateAbbreviationsMap objectForKey:self.uppercaseString];
 }
 
-- (NSString*) stateFullNameFromAbbreviation
+- (NSString *)stateFullNameFromAbbreviation
 {
-    NSString * upperAbbr = [self uppercaseString];
+    NSString *upperAbbr = [self uppercaseString];
     
-    for(NSString * abbreviation in [self.stateAbbreviationsMap allValues])
-    {
-        if([abbreviation isEqualToString:upperAbbr])
-        {   
+    for (NSString *abbreviation in [self.stateAbbreviationsMap allValues]) {
+        if ([abbreviation isEqualToString:upperAbbr]) {   
 	    return [[self.stateAbbreviationsMap objectForKey:upperAbbr] capitalizedString];
 	}
     }
