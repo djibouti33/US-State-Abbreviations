@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (USStateMap)
++ (NSDictionary *) stateAbbreviationsMap;
 - (NSString*) stateAbbreviationFromFullName;
 - (NSString*) stateFullNameFromAbbreviation;
 @end
