@@ -5,32 +5,46 @@
 
 #import "NSString+USStateMap.h"
 
+@interface NSString (USStateMapPrivate)
+
++ (NSDictionary *)stateAbbreviationsMap;
+
+@end
+
 @implementation NSString (USStateMap)
 
-static NSDictionary *stateAbbreviationsMap = nil;
-- (NSDictionary *)stateAbbreviationsMap 
++ (NSDictionary *)stateAbbreviationsMap
 {
-    if (stateAbbreviationsMap == nil) {
-        NSString *plist = [[NSBundle mainBundle] pathForResource:@"USStateAbbreviations" ofType:@"plist"];
-        stateAbbreviationsMap = [[NSDictionary alloc] initWithContentsOfFile:plist];
-    }
-    return stateAbbreviationsMap;
+    static NSDictionary *map;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"USStateAbbreviations" ofType:@"plist"];
+        map = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+    });
+    
+    return map;
 }
 
-- (NSString *)stateAbbreviationFromFullName 
+- (NSString *)stateAbbreviationFromFullName
 {
-    return [self.stateAbbreviationsMap objectForKey:self.uppercaseString];
+    return [[[self class] stateAbbreviationsMap] objectForKey:[self uppercaseString]];
 }
 
 - (NSString *)stateFullNameFromAbbreviation
 {
     NSString *upperAbbr = [self uppercaseString];
     
-    for (NSString *abbreviation in [self.stateAbbreviationsMap allValues]) {
-        if ([abbreviation isEqualToString:upperAbbr]) {   
-	    return [[self.stateAbbreviationsMap objectForKey:upperAbbr] capitalizedString];
-	}
-    }
-    return nil;
+    __block NSString *name = nil;
+    
+    [[[self class] stateAbbreviationsMap] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        if ([obj isEqualToString:upperAbbr]) {
+            name = key;
+            *stop = YES;
+        }
+    }];
+    
+    return name;
 }
+
 @end
