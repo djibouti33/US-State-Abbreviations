@@ -8,4 +8,6 @@
 @interface NSString (PostalMap)
 - (NSString*) stateAbbreviationFromFullName;
 - (NSString*) stateFullNameFromAbbreviation;
+- (NSString *)provinceAbbreviationFromFullName;
+- (NSString *)provinceFullNameFromAbbreviation;
 @end
