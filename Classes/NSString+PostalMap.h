@@ -5,7 +5,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (USStateMap)
+@interface NSString (PostalMap)
 - (NSString*) stateAbbreviationFromFullName;
 - (NSString*) stateFullNameFromAbbreviation;
+- (NSString *)provinceAbbreviationFromFullName;
+- (NSString *)provinceFullNameFromAbbreviation;
 @end

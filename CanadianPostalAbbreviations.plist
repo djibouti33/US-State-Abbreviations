@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ALBERTA</key>
+	<string>AB</string>
+	<key>BRITISH COLUMBIA</key>
+	<string>BC</string>
+	<key>MANITOBA</key>
+	<string>MB</string>
+	<key>NEW BRUNSWICK</key>
+	<string>NB</string>
+	<key>NEWFOUNDLAND AND LABRADOR</key>
+	<string>NL</string>
+	<key>NORTHWEST TERRITORIES</key>
+	<string>NT</string>
+	<key>NOVA SCOTIA</key>
+	<string>NS</string>
+	<key>NUNAVUT</key>
+	<string>NU</string>
+	<key>ONTARIO</key>
+	<string>ON</string>
+	<key>PRINCE EDWARD ISLAND</key>
+	<string>PE</string>
+	<key>QUEBEC</key>
+	<string>QC</string>
+	<key>SASKATCHEWAN</key>
+	<string>SK</string>
+	<key>YUKON</key>
+	<string>YT</string>
+</dict>
+</plist>
