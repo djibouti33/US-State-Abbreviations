@@ -6,7 +6,7 @@ http://www.usps.com/ncsc/lookups/usps_abbreviations.html
 Usage:
 
 // At the top of your class file (.m)
-#import "NSString+USStateMap.h"
+#import "NSString+PostalMap.h"
 
 // Later in your class file (.m)
 
