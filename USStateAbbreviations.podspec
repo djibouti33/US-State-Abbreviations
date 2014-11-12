@@ -10,5 +10,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '4.3'
   s.source_files = 'Classes', 'Classes/**/*.{h,m}'
   s.public_header_files = 'Classes/**/*.h'
-  s.resources = ['USStateAbbreviations.plist']
+  s.resources = ['USStateAbbreviations.plist', 'CanadianPostalAbbreviations.plist']
 end
