@@ -25,12 +25,12 @@ static NSDictionary *stateAbbreviationsMap = nil;
 - (NSString *)stateFullNameFromAbbreviation
 {
     NSString *upperAbbr = [self uppercaseString];
+    NSUInteger abbrIndex = [self.stateAbbreviationsMap.allValues
+                            indexOfObjectPassingTest:^BOOL(NSString *abbr, NSUInteger idx, BOOL *stop) {
+                                return [abbr isEqualToString:upperAbbr];
+                            }];
+    if (abbrIndex == NSNotFound) return nil;
     
-    for (NSString *abbreviation in [self.stateAbbreviationsMap allValues]) {
-        if ([abbreviation isEqualToString:upperAbbr]) {   
-	    return [[self.stateAbbreviationsMap objectForKey:upperAbbr] capitalizedString];
-	}
-    }
-    return nil;
+    return self.stateAbbreviationsMap.allKeys[abbrIndex];
 }
 @end
