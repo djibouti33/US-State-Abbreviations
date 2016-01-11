@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'USStateAbbreviations'
-  s.version      = '0.0.2'
+  s.version      = '0.0.3'
   s.summary      = 'A category and plist file that work together to provide standardized access to US territory name abbreviations.'
   s.homepage     = 'https://github.com/djibouti33/US-State-Abbreviations'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
