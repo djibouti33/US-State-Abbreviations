@@ -14,6 +14,7 @@ static NSDictionary *stateAbbreviationsMap = nil;
         NSString *plist = [[NSBundle mainBundle] pathForResource:@"USStateAbbreviations" ofType:@"plist"];
         stateAbbreviationsMap = [[NSDictionary alloc] initWithContentsOfFile:plist];
     }
+
     return stateAbbreviationsMap;
 }
 
@@ -24,13 +25,8 @@ static NSDictionary *stateAbbreviationsMap = nil;
 
 - (NSString *)stateFullNameFromAbbreviation
 {
-    NSString *upperAbbr = [self uppercaseString];
-    
-    for (NSString *abbreviation in [self.stateAbbreviationsMap allValues]) {
-        if ([abbreviation isEqualToString:upperAbbr]) {   
-	    return [[self.stateAbbreviationsMap objectForKey:upperAbbr] capitalizedString];
-	}
-    }
-    return nil;
+    NSString *uppercaseAbbreviation = [self uppercaseString];
+
+    return [[[self.stateAbbreviationsMap allKeysForObject:uppercaseAbbreviation] lastObject] capitalizedString];
 }
 @end
